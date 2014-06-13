@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{0BC76165-2FC6-4C1B-937F-773A43F82296}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap\bootstrap.css">
+      <DependentUpon>bootstrap.less</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap\bootstrap.min.css">
+      <DependentUpon>bootstrap.css</DependentUpon>
+    </Content>
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\images\1.gif" />
+    <Content Include="Content\images\10.gif" />
+    <Content Include="Content\images\100.gif" />
+    <Content Include="Content\images\101.gif" />
+    <Content Include="Content\images\102.gif" />
+    <Content Include="Content\images\103.gif" />
+    <Content Include="Content\images\104.gif" />
+    <Content Include="Content\images\105.gif" />
+    <Content Include="Content\images\106.gif" />
+    <Content Include="Content\images\107.gif" />
+    <Content Include="Content\images\108.gif" />
+    <Content Include="Content\images\109.gif" />
+    <Content Include="Content\images\11.gif" />
+    <Content Include="Content\images\110.gif" />
+    <Content Include="Content\images\111.gif" />
+    <Content Include="Content\images\112.gif" />
+    <Content Include="Content\images\113.gif" />
+    <Content Include="Content\images\114.gif" />
+    <Content Include="Content\images\115.gif" />
+    <Content Include="Content\images\116.gif" />
+    <Content Include="Content\images\117.gif" />
+    <Content Include="Content\images\118.gif" />
+    <Content Include="Content\images\119.gif" />
+    <Content Include="Content\images\12.gif" />
+    <Content Include="Content\images\120.gif" />
+    <Content Include="Content\images\121.gif" />
+    <Content Include="Content\images\122.gif" />
+    <Content Include="Content\images\123.gif" />
+    <Content Include="Content\images\124.gif" />
+    <Content Include="Content\images\125.gif" />
+    <Content Include="Content\images\126.gif" />
+    <Content Include="Content\images\127.gif" />
+    <Content Include="Content\images\128.gif" />
+    <Content Include="Content\images\129.gif" />
+    <Content Include="Content\images\13.gif" />
+    <Content Include="Content\images\130.gif" />
+    <Content Include="Content\images\131.gif" />
+    <Content Include="Content\images\132.gif" />
+    <Content Include="Content\images\133.gif" />
+    <Content Include="Content\images\134.gif" />
+    <Content Include="Content\images\135.gif" />
+    <Content Include="Content\images\136.gif" />
+    <Content Include="Content\images\137.gif" />
+    <Content Include="Content\images\138.gif" />
+    <Content Include="Content\images\139.gif" />
+    <Content Include="Content\images\14.gif" />
+    <Content Include="Content\images\140.gif" />
+    <Content Include="Content\images\141.gif" />
+    <Content Include="Content\images\142.gif" />
+    <Content Include="Content\images\143.gif" />
+    <Content Include="Content\images\144.gif" />
+    <Content Include="Content\images\145.gif" />
+    <Content Include="Content\images\146.gif" />
+    <Content Include="Content\images\147.gif" />
+    <Content Include="Content\images\148.gif" />
+    <Content Include="Content\images\149.gif" />
+    <Content Include="Content\images\15.gif" />
+    <Content Include="Content\images\150.gif" />
+    <Content Include="Content\images\151.gif" />
+    <Content Include="Content\images\152.gif" />
+    <Content Include="Content\images\153.gif" />
+    <Content Include="Content\images\154.gif" />
+    <Content Include="Content\images\155.gif" />
+    <Content Include="Content\images\156.gif" />
+    <Content Include="Content\images\157.gif" />
+    <Content Include="Content\images\158.gif" />
+    <Content Include="Content\images\159.gif" />
+    <Content Include="Content\images\16.gif" />
+    <Content Include="Content\images\160.gif" />
+    <Content Include="Content\images\161.gif" />
+    <Content Include="Content\images\162.gif" />
+    <Content Include="Content\images\163.gif" />
+    <Content Include="Content\images\164.gif" />
+    <Content Include="Content\images\165.gif" />
+    <Content Include="Content\images\166.gif" />
+    <Content Include="Content\images\167.gif" />
+    <Content Include="Content\images\168.gif" />
+    <Content Include="Content\images\169.gif" />
+    <Content Include="Content\images\17.gif" />
+    <Content Include="Content\images\170.gif" />
+    <Content Include="Content\images\171.gif" />
+    <Content Include="Content\images\172.gif" />
+    <Content Include="Content\images\173.gif" />
+    <Content Include="Content\images\174.gif" />
+    <Content Include="Content\images\175.gif" />
+    <Content Include="Content\images\176.gif" />
+    <Content Include="Content\images\177.gif" />
+    <Content Include="Content\images\178.gif" />
+    <Content Include="Content\images\179.gif" />
+    <Content Include="Content\images\18.gif" />
+    <Content Include="Content\images\180.gif" />
+    <Content Include="Content\images\181.gif" />
+    <Content Include="Content\images\182.gif" />
+    <Content Include="Content\images\183.gif" />
+    <Content Include="Content\images\184.gif" />
+    <Content Include="Content\images\185.gif" />
+    <Content Include="Content\images\186.gif" />
+    <Content Include="Content\images\187.gif" />
+    <Content Include="Content\images\188.gif" />
+    <Content Include="Content\images\189.gif" />
+    <Content Include="Content\images\19.gif" />
+    <Content Include="Content\images\190.gif" />
+    <Content Include="Content\images\191.gif" />
+    <Content Include="Content\images\192.gif" />
+    <Content Include="Content\images\193.gif" />
+    <Content Include="Content\images\194.gif" />
+    <Content Include="Content\images\195.gif" />
+    <Content Include="Content\images\196.gif" />
+    <Content Include="Content\images\197.gif" />
+    <Content Include="Content\images\198.gif" />
+    <Content Include="Content\images\199.gif" />
+    <Content Include="Content\images\2.gif" />
+    <Content Include="Content\images\20.gif" />
+    <Content Include="Content\images\200.gif" />
+    <Content Include="Content\images\201.gif" />
+    <Content Include="Content\images\202.gif" />
+    <Content Include="Content\images\203.gif" />
+    <Content Include="Content\images\204.gif" />
+    <Content Include="Content\images\205.gif" />
+    <Content Include="Content\images\206.gif" />
+    <Content Include="Content\images\207.gif" />
+    <Content Include="Content\images\208.gif" />
+    <Content Include="Content\images\209.gif" />
+    <Content Include="Content\images\21.gif" />
+    <Content Include="Content\images\210.gif" />
+    <Content Include="Content\images\211.gif" />
+    <Content Include="Content\images\212.gif" />
+    <Content Include="Content\images\213.gif" />
+    <Content Include="Content\images\214.gif" />
+    <Content Include="Content\images\215.gif" />
+    <Content Include="Content\images\216.gif" />
+    <Content Include="Content\images\217.gif" />
+    <Content Include="Content\images\218.gif" />
+    <Content Include="Content\images\219.gif" />
+    <Content Include="Content\images\22.gif" />
+    <Content Include="Content\images\220.gif" />
+    <Content Include="Content\images\221.gif" />
+    <Content Include="Content\images\222.gif" />
+    <Content Include="Content\images\223.gif" />
+    <Content Include="Content\images\224.gif" />
+    <Content Include="Content\images\225.gif" />
+    <Content Include="Content\images\226.gif" />
+    <Content Include="Content\images\227.gif" />
+    <Content Include="Content\images\228.gif" />
+    <Content Include="Content\images\229.gif" />
+    <Content Include="Content\images\23.gif" />
+    <Content Include="Content\images\230.gif" />
+    <Content Include="Content\images\231.gif" />
+    <Content Include="Content\images\232.gif" />
+    <Content Include="Content\images\233.gif" />
+    <Content Include="Content\images\234.gif" />
+    <Content Include="Content\images\235.gif" />
+    <Content Include="Content\images\236.gif" />
+    <Content Include="Content\images\237.gif" />
+    <Content Include="Content\images\238.gif" />
+    <Content Include="Content\images\239.gif" />
+    <Content Include="Content\images\24.gif" />
+    <Content Include="Content\images\240.gif" />
+    <Content Include="Content\images\241.gif" />
+    <Content Include="Content\images\242.gif" />
+    <Content Include="Content\images\243.gif" />
+    <Content Include="Content\images\244.gif" />
+    <Content Include="Content\images\245.gif" />
+    <Content Include="Content\images\246.gif" />
+    <Content Include="Content\images\247.gif" />
+    <Content Include="Content\images\248.gif" />
+    <Content Include="Content\images\249.gif" />
+    <Content Include="Content\images\25.gif" />
+    <Content Include="Content\images\250.gif" />
+    <Content Include="Content\images\251.gif" />
+    <Content Include="Content\images\252.gif" />
+    <Content Include="Content\images\253.gif" />
+    <Content Include="Content\images\254.gif" />
+    <Content Include="Content\images\255.gif" />
+    <Content Include="Content\images\256.gif" />
+    <Content Include="Content\images\257.gif" />
+    <Content Include="Content\images\258.gif" />
+    <Content Include="Content\images\259.gif" />
+    <Content Include="Content\images\26.gif" />
+    <Content Include="Content\images\260.gif" />
+    <Content Include="Content\images\261.gif" />
+    <Content Include="Content\images\262.gif" />
+    <Content Include="Content\images\263.gif" />
+    <Content Include="Content\images\264.gif" />
+    <Content Include="Content\images\265.gif" />
+    <Content Include="Content\images\266.gif" />
+    <Content Include="Content\images\267.gif" />
+    <Content Include="Content\images\268.gif" />
+    <Content Include="Content\images\269.gif" />
+    <Content Include="Content\images\27.gif" />
+    <Content Include="Content\images\270.gif" />
+    <Content Include="Content\images\271.gif" />
+    <Content Include="Content\images\272.gif" />
+    <Content Include="Content\images\273.gif" />
+    <Content Include="Content\images\274.gif" />
+    <Content Include="Content\images\275.gif" />
+    <Content Include="Content\images\276.gif" />
+    <Content Include="Content\images\277.gif" />
+    <Content Include="Content\images\278.gif" />
+    <Content Include="Content\images\279.gif" />
+    <Content Include="Content\images\28.gif" />
+    <Content Include="Content\images\280.gif" />
+    <Content Include="Content\images\281.gif" />
+    <Content Include="Content\images\282.gif" />
+    <Content Include="Content\images\283.gif" />
+    <Content Include="Content\images\284.gif" />
+    <Content Include="Content\images\285.gif" />
+    <Content Include="Content\images\286.gif" />
+    <Content Include="Content\images\287.gif" />
+    <Content Include="Content\images\288.gif" />
+    <Content Include="Content\images\289.gif" />
+    <Content Include="Content\images\29.gif" />
+    <Content Include="Content\images\290.gif" />
+    <Content Include="Content\images\291.gif" />
+    <Content Include="Content\images\292.gif" />
+    <Content Include="Content\images\293.gif" />
+    <Content Include="Content\images\294.gif" />
+    <Content Include="Content\images\295.gif" />
+    <Content Include="Content\images\296.gif" />
+    <Content Include="Content\images\297.gif" />
+    <Content Include="Content\images\298.gif" />
+    <Content Include="Content\images\299.gif" />
+    <Content Include="Content\images\3.gif" />
+    <Content Include="Content\images\30.gif" />
+    <Content Include="Content\images\300.gif" />
+    <Content Include="Content\images\301.gif" />
+    <Content Include="Content\images\302.gif" />
+    <Content Include="Content\images\303.gif" />
+    <Content Include="Content\images\304.gif" />
+    <Content Include="Content\images\305.gif" />
+    <Content Include="Content\images\306.gif" />
+    <Content Include="Content\images\307.gif" />
+    <Content Include="Content\images\308.gif" />
+    <Content Include="Content\images\309.gif" />
+    <Content Include="Content\images\31.gif" />
+    <Content Include="Content\images\310.gif" />
+    <Content Include="Content\images\311.gif" />
+    <Content Include="Content\images\312.gif" />
+    <Content Include="Content\images\313.gif" />
+    <Content Include="Content\images\314.gif" />
+    <Content Include="Content\images\315.gif" />
+    <Content Include="Content\images\316.gif" />
+    <Content Include="Content\images\317.gif" />
+    <Content Include="Content\images\318.gif" />
+    <Content Include="Content\images\319.gif" />
+    <Content Include="Content\images\32.gif" />
+    <Content Include="Content\images\320.gif" />
+    <Content Include="Content\images\321.gif" />
+    <Content Include="Content\images\322.gif" />
+    <Content Include="Content\images\323.gif" />
+    <Content Include="Content\images\324.gif" />
+    <Content Include="Content\images\325.gif" />
+    <Content Include="Content\images\326.gif" />
+    <Content Include="Content\images\327.gif" />
+    <Content Include="Content\images\328.gif" />
+    <Content Include="Content\images\329.gif" />
+    <Content Include="Content\images\33.gif" />
+    <Content Include="Content\images\330.gif" />
+    <Content Include="Content\images\331.gif" />
+    <Content Include="Content\images\332.gif" />
+    <Content Include="Content\images\333.gif" />
+    <Content Include="Content\images\334.gif" />
+    <Content Include="Content\images\335.gif" />
+    <Content Include="Content\images\336.gif" />
+    <Content Include="Content\images\337.gif" />
+    <Content Include="Content\images\338.gif" />
+    <Content Include="Content\images\339.gif" />
+    <Content Include="Content\images\34.gif" />
+    <Content Include="Content\images\340.gif" />
+    <Content Include="Content\images\341.gif" />
+    <Content Include="Content\images\342.gif" />
+    <Content Include="Content\images\343.gif" />
+    <Content Include="Content\images\35.gif" />
+    <Content Include="Content\images\36.gif" />
+    <Content Include="Content\images\37.gif" />
+    <Content Include="Content\images\38.gif" />
+    <Content Include="Content\images\39.gif" />
+    <Content Include="Content\images\4.gif" />
+    <Content Include="Content\images\40.gif" />
+    <Content Include="Content\images\41.gif" />
+    <Content Include="Content\images\42.gif" />
+    <Content Include="Content\images\43.gif" />
+    <Content Include="Content\images\44.gif" />
+    <Content Include="Content\images\45.gif" />
+    <Content Include="Content\images\46.gif" />
+    <Content Include="Content\images\47.gif" />
+    <Content Include="Content\images\48.gif" />
+    <Content Include="Content\images\49.gif" />
+    <Content Include="Content\images\5.gif" />
+    <Content Include="Content\images\50.gif" />
+    <Content Include="Content\images\51.gif" />
+    <Content Include="Content\images\52.gif" />
+    <Content Include="Content\images\53.gif" />
+    <Content Include="Content\images\54.gif" />
+    <Content Include="Content\images\55.gif" />
+    <Content Include="Content\images\56.gif" />
+    <Content Include="Content\images\57.gif" />
+    <Content Include="Content\images\58.gif" />
+    <Content Include="Content\images\59.gif" />
+    <Content Include="Content\images\6.gif" />
+    <Content Include="Content\images\60.gif" />
+    <Content Include="Content\images\61.gif" />
+    <Content Include="Content\images\62.gif" />
+    <Content Include="Content\images\63.gif" />
+    <Content Include="Content\images\64.gif" />
+    <Content Include="Content\images\65.gif" />
+    <Content Include="Content\images\66.gif" />
+    <Content Include="Content\images\67.gif" />
+    <Content Include="Content\images\68.gif" />
+    <Content Include="Content\images\69.gif" />
+    <Content Include="Content\images\7.gif" />
+    <Content Include="Content\images\70.gif" />
+    <Content Include="Content\images\71.gif" />
+    <Content Include="Content\images\72.gif" />
+    <Content Include="Content\images\73.gif" />
+    <Content Include="Content\images\74.gif" />
+    <Content Include="Content\images\75.gif" />
+    <Content Include="Content\images\76.gif" />
+    <Content Include="Content\images\77.gif" />
+    <Content Include="Content\images\78.gif" />
+    <Content Include="Content\images\79.gif" />
+    <Content Include="Content\images\8.gif" />
+    <Content Include="Content\images\80.gif" />
+    <Content Include="Content\images\81.gif" />
+    <Content Include="Content\images\82.gif" />
+    <Content Include="Content\images\83.gif" />
+    <Content Include="Content\images\84.gif" />
+    <Content Include="Content\images\85.gif" />
+    <Content Include="Content\images\86.gif" />
+    <Content Include="Content\images\87.gif" />
+    <Content Include="Content\images\88.gif" />
+    <Content Include="Content\images\89.gif" />
+    <Content Include="Content\images\9.gif" />
+    <Content Include="Content\images\90.gif" />
+    <Content Include="Content\images\91.gif" />
+    <Content Include="Content\images\92.gif" />
+    <Content Include="Content\images\93.gif" />
+    <Content Include="Content\images\94.gif" />
+    <Content Include="Content\images\95.gif" />
+    <Content Include="Content\images\96.gif" />
+    <Content Include="Content\images\97.gif" />
+    <Content Include="Content\images\98.gif" />
+    <Content Include="Content\images\99.gif" />
+    <Content Include="index.html" />
+    <Content Include="packages.config" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap\wells.less" />
+    <Content Include="Content\bootstrap\variables.less" />
+    <Content Include="Content\bootstrap\utilities.less" />
+    <Content Include="Content\bootstrap\type.less" />
+    <Content Include="Content\bootstrap\tooltip.less" />
+    <Content Include="Content\bootstrap\thumbnails.less" />
+    <Content Include="Content\bootstrap\theme.less" />
+    <Content Include="Content\bootstrap\tables.less" />
+    <Content Include="Content\bootstrap\scaffolding.less" />
+    <Content Include="Content\bootstrap\responsive-utilities.less" />
+    <Content Include="Content\bootstrap\progress-bars.less" />
+    <Content Include="Content\bootstrap\print.less" />
+    <Content Include="Content\bootstrap\popovers.less" />
+    <Content Include="Content\bootstrap\panels.less" />
+    <Content Include="Content\bootstrap\pagination.less" />
+    <Content Include="Content\bootstrap\pager.less" />
+    <Content Include="Content\bootstrap\normalize.less" />
+    <Content Include="Content\bootstrap\navs.less" />
+    <Content Include="Content\bootstrap\navbar.less" />
+    <Content Include="Content\bootstrap\modals.less" />
+    <Content Include="Content\bootstrap\mixins.less" />
+    <Content Include="Content\bootstrap\media.less" />
+    <Content Include="Content\bootstrap\list-group.less" />
+    <Content Include="Content\bootstrap\labels.less" />
+    <Content Include="Content\bootstrap\jumbotron.less" />
+    <Content Include="Content\bootstrap\input-groups.less" />
+    <Content Include="Content\bootstrap\grid.less" />
+    <Content Include="Content\bootstrap\glyphicons.less" />
+    <Content Include="Content\bootstrap\forms.less" />
+    <Content Include="Content\bootstrap\dropdowns.less" />
+    <Content Include="Content\bootstrap\component-animations.less" />
+    <Content Include="Content\bootstrap\code.less" />
+    <Content Include="Content\bootstrap\close.less" />
+    <Content Include="Content\bootstrap\carousel.less" />
+    <Content Include="Content\bootstrap\buttons.less" />
+    <Content Include="Content\bootstrap\button-groups.less" />
+    <Content Include="Content\bootstrap\breadcrumbs.less" />
+    <Content Include="Content\bootstrap\bootstrap.less" />
+    <Content Include="Content\bootstrap\badges.less" />
+    <Content Include="Content\bootstrap\alerts.less" />
+    <Content Include="Content\bootstrap\bootstrap.css.map">
+      <DependentUpon>bootstrap.css</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="web.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\app.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>TypeScriptHTMLApp1</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3130</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3130/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>
