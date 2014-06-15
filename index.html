@@ -24,16 +24,21 @@
             transition: left .2s, margin .2s;
         }
             .secondary-menu.out {
-                left: -8%;
+                left: -12%;
             }
         #pages {
-            -moz-transition: width ease-in-out .2s, margin ease-in-out .2s;
-            -o-transition: width ease-in-out .2s, margin ease-in-out .2s;
-            -webkit-transition: width ease-in-out .2s, margin ease-in-out .2s;
-            transition: width ease-in-out .2s, margin ease-in-out .2s;
+            -moz-transition: width .2s, margin .2s;
+            -o-transition: width .2s, margin .2s;
+            -webkit-transition: width .2s, margin .2s;
+            transition: width .2s, margin .2s;
         }
-        .col-xs-offset-2 {
-            margin-left: 16%;
+        @media only screen and (max-width : 992px) {
+            .col-xs-offset-2 {
+                margin-left: 16%;
+            }
+            .col-xs-offset-1 {
+                margin-left: 8%;
+            }
         }
 
         .submenu {
@@ -125,7 +130,7 @@
         }
         $("#menu-toggle").click(function () {
             $(".secondary-menu").toggleClass("out");
-            $("#pages").toggleClass("col-xs-offset-2 col-xs-10 col-xs-11 col-md-12")
+            $("#pages").toggleClass("col-xs-offset-2 col-xs-10 col-xs-offset-1 col-xs-11 col-md-12")
         });
     </script>
 
