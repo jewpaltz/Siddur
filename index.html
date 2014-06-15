@@ -18,19 +18,19 @@
             z-index: 1;
             overflow-y: scroll;
             overflow-x: hidden;
-            -moz-transition: all linear .2s;
-            -o-transition: all linear .2s;
-            -webkit-transition: all linear .2s;
-            transition: all linear .2s;
+            -moz-transition: left linear .2s;
+            -o-transition: left linear .2s;
+            -webkit-transition: left linear .2s;
+            transition: left linear .2s;
         }
             .secondary-menu.out {
-                width: 44px;
+                left: -8%;
             }
         #pages {
-            -moz-transition: all ease-in-out .2s;
-            -o-transition: all ease-in-out .2s;
-            -webkit-transition: all ease-in-out .2s;
-            transition: all ease-in-out .2s;
+            -moz-transition: width ease-in-out .2s;
+            -o-transition: width ease-in-out .2s;
+            -webkit-transition: width ease-in-out .2s;
+            transition: width ease-in-out .2s;
         }
         .col-xs-offset-2 {
             margin-left: 16%;
@@ -125,7 +125,7 @@
         }
         $("#menu-toggle").click(function () {
             $(".secondary-menu").toggleClass("out");
-            $("#pages").toggleClass("col-xs-offset-2 col-xs-10 col-xs-12")
+            $("#pages").toggleClass("col-xs-offset-2 col-xs-10 col-xs-11 col-md-12")
         });
     </script>
 
