@@ -107,12 +107,14 @@
     <script src="Scripts/bootstrap.min.js"></script>
     <script type="text/javascript">
         function PagesController($scope) {
-            $scope.pages = range(1, 344);
             $scope.shacharit = range(1, 86);
             $scope.mincha = range(96, 106);
             $scope.maariv = range(106, 118);
             $scope.shema = range(118, 122);
             $scope.erevshabbat = range(122, 124);
+
+            $scope.pages = $scope.shacharit;
+            $scope.pages = range(1, 344);
         }
         function range(start, count) {
             return Array.apply(0, Array(count))
