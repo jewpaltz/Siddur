@@ -10,392 +10,89 @@
         .secondary-menu {
             position: fixed;
             top: 2px;
-            left: 0px;
+            left: 0;
             bottom: 2px;
             background-color: #FFF;
             border: 1px solid #CCF;
             border-radius: 0 5px 5px 0;
             padding: 5px;
             z-index: 1;
+            overflow-y: scroll;
+            -moz-transition: all linear .4s;
+            -o-transition: all linear .4s;
+            -webkit-transition: all linear .4s;
+            transition: all linear .4s;
+        }
+            .secondary-menu.out {
+                left:-10%;
+            }
+        #pages {
+            -moz-transition: all linear .4s;
+            -o-transition: all linear .4s;
+            -webkit-transition: all linear .4s;
+            transition: all linear .4s;
+        }
+        .col-xs-offset-2 {
+            margin-left: 17%;
         }
 
-        .col-xs-offset-2 {
-            margin-left: 18%;
+        .submenu {
+            padding-left: 20px;
+        }
+        .menu-title {
+            background-color: #1b1b1b;
+            margin: -5px;
+            margin-bottom: 1px;
+        }
+        .menu-title button{
+            float: right;
+            background-color: #040404;
+        }
+        .icon-bar {
+            display: block;
+            width: 18px;
+            height: 2px;
+            background-color: #f5f5f5;
+            margin-top: 3px;
+            border-radius: 1px;
+            box-shadow: 0 1px 0 rgba(0,0,0,.25);
         }
     </style>
 </head>
-<body data-spy="scroll" data-target=".secondary-menu">
+<body data-spy="scroll" data-target=".secondary-menu" ng-app="">
     <div class="container body-content">
-        <div class="secondary-menu col-xs-2">
-            <button type="button" class="navbar-toggle">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <ul class="nav nav-pills nav-stacked">
-                <li><a href="#page1">Birchat Hashachar</a></li>
-                <li><a href="#page12">Ma Tovu</a></li>
-                <li><a href="#page18">Korbonot</a></li>
-                <li><a href="#page27">Hodu</a></li>
-                <li><a href="#page42">Birchot Shema</a></li>
-                <li><a href="#page50">Amida</a></li>
-                <li><a href="#page71">Ashrei UvaLitziyon</a></li>
-                <li><a href="#page84">Oleinu</a></li>
-                <li><a href="#page88">Benching</a></li>
-                <li><a href="#page96">Mincha</a></li>
-                <li><a href="#page106">Ma'ariv</a></li>
-                <li><a href="#page118">Shema Al Hamita</a></li>
-            </ul>
-        </div>
         <div class="row">
-            <div class="col-xs-offset-2 col-xs-10">
-                <div class="well">
-                    <h1>Siddur</h1>
+            <div class="secondary-menu col-xs-2">
+                <div class="menu-title clearfix">
+                    <button type="button" class=" btn" id="menu-toggle">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                 </div>
-                <img id="page0" src="Content/images/0.gif" width="100%">
-                <img id="page1" src="Content/images/1.gif" width="100%">
-                <img id="page2" src="Content/images/2.gif" width="100%">
-                <img id="page3" src="Content/images/3.gif" width="100%">
-                <img id="page4" src="Content/images/4.gif" width="100%">
-                <img id="page5" src="Content/images/5.gif" width="100%">
-                <img id="page6" src="Content/images/6.gif" width="100%">
-                <img id="page7" src="Content/images/7.gif" width="100%">
-                <img id="page8" src="Content/images/8.gif" width="100%">
-                <img id="page9" src="Content/images/9.gif" width="100%">
-                <img id="page10" src="Content/images/10.gif" width="100%">
-                <img id="page11" src="Content/images/11.gif" width="100%">
-                <img id="page12" src="Content/images/12.gif" width="100%">
-                <img id="page13" src="Content/images/13.gif" width="100%">
-                <img id="page14" src="Content/images/14.gif" width="100%">
-                <img id="page15" src="Content/images/15.gif" width="100%">
-                <img id="page16" src="Content/images/16.gif" width="100%">
-                <img id="page17" src="Content/images/17.gif" width="100%">
-                <img id="page18" src="Content/images/18.gif" width="100%">
-                <img id="page19" src="Content/images/19.gif" width="100%">
-                <img id="page20" src="Content/images/20.gif" width="100%">
-                <img id="page21" src="Content/images/21.gif" width="100%">
-                <img id="page22" src="Content/images/22.gif" width="100%">
-                <img id="page23" src="Content/images/23.gif" width="100%">
-                <img id="page24" src="Content/images/24.gif" width="100%">
-                <img id="page25" src="Content/images/25.gif" width="100%">
-                <img id="page26" src="Content/images/26.gif" width="100%">
-                <img id="page27" src="Content/images/27.gif" width="100%">
-                <img id="page28" src="Content/images/28.gif" width="100%">
-                <img id="page29" src="Content/images/29.gif" width="100%">
-                <img id="page30" src="Content/images/30.gif" width="100%">
-                <img id="page31" src="Content/images/31.gif" width="100%">
-                <img id="page32" src="Content/images/32.gif" width="100%">
-                <img id="page33" src="Content/images/33.gif" width="100%">
-                <img id="page34" src="Content/images/34.gif" width="100%">
-                <img id="page35" src="Content/images/35.gif" width="100%">
-                <img id="page36" src="Content/images/36.gif" width="100%">
-                <img id="page37" src="Content/images/37.gif" width="100%">
-                <img id="page38" src="Content/images/38.gif" width="100%">
-                <img id="page39" src="Content/images/39.gif" width="100%">
-                <img id="page40" src="Content/images/40.gif" width="100%">
-                <img id="page41" src="Content/images/41.gif" width="100%">
-                <img id="page42" src="Content/images/42.gif" width="100%">
-                <img id="page43" src="Content/images/43.gif" width="100%">
-                <img id="page44" src="Content/images/44.gif" width="100%">
-                <img id="page45" src="Content/images/45.gif" width="100%">
-                <img id="page46" src="Content/images/46.gif" width="100%">
-                <img id="page47" src="Content/images/47.gif" width="100%">
-                <img id="page48" src="Content/images/48.gif" width="100%">
-                <img id="page49" src="Content/images/49.gif" width="100%">
-                <img id="page50" src="Content/images/50.gif" width="100%">
-                <img id="page51" src="Content/images/51.gif" width="100%">
-                <img id="page52" src="Content/images/52.gif" width="100%">
-                <img id="page53" src="Content/images/53.gif" width="100%">
-                <img id="page54" src="Content/images/54.gif" width="100%">
-                <img id="page55" src="Content/images/55.gif" width="100%">
-                <img id="page56" src="Content/images/56.gif" width="100%">
-                <img id="page57" src="Content/images/57.gif" width="100%">
-                <img id="page58" src="Content/images/58.gif" width="100%">
-                <img id="page59" src="Content/images/59.gif" width="100%">
-                <img id="page60" src="Content/images/60.gif" width="100%">
-                <img id="page61" src="Content/images/61.gif" width="100%">
-                <img id="page62" src="Content/images/62.gif" width="100%">
-                <img id="page63" src="Content/images/63.gif" width="100%">
-                <img id="page64" src="Content/images/64.gif" width="100%">
-                <img id="page65" src="Content/images/65.gif" width="100%">
-                <img id="page66" src="Content/images/66.gif" width="100%">
-                <img id="page67" src="Content/images/67.gif" width="100%">
-                <img id="page68" src="Content/images/68.gif" width="100%">
-                <img id="page69" src="Content/images/69.gif" width="100%">
-                <img id="page70" src="Content/images/70.gif" width="100%">
-                <img id="page71" src="Content/images/71.gif" width="100%">
-                <img id="page72" src="Content/images/72.gif" width="100%">
-                <img id="page73" src="Content/images/73.gif" width="100%">
-                <img id="page74" src="Content/images/74.gif" width="100%">
-                <img id="page75" src="Content/images/75.gif" width="100%">
-                <img id="page76" src="Content/images/76.gif" width="100%">
-                <img id="page77" src="Content/images/77.gif" width="100%">
-                <img id="page78" src="Content/images/78.gif" width="100%">
-                <img id="page79" src="Content/images/79.gif" width="100%">
-                <img id="page80" src="Content/images/80.gif" width="100%">
-                <img id="page81" src="Content/images/81.gif" width="100%">
-                <img id="page82" src="Content/images/82.gif" width="100%">
-                <img id="page83" src="Content/images/83.gif" width="100%">
-                <img id="page84" src="Content/images/84.gif" width="100%">
-                <img id="page85" src="Content/images/85.gif" width="100%">
-                <img id="page86" src="Content/images/86.gif" width="100%">
-                <img id="page87" src="Content/images/87.gif" width="100%">
-                <img id="page88" src="Content/images/88.gif" width="100%">
-                <img id="page89" src="Content/images/89.gif" width="100%">
-                <img id="page90" src="Content/images/90.gif" width="100%">
-                <img id="page91" src="Content/images/91.gif" width="100%">
-                <img id="page92" src="Content/images/92.gif" width="100%">
-                <img id="page93" src="Content/images/93.gif" width="100%">
-                <img id="page94" src="Content/images/94.gif" width="100%">
-                <img id="page95" src="Content/images/95.gif" width="100%">
-                <img id="page96" src="Content/images/96.gif" width="100%">
-                <img id="page97" src="Content/images/97.gif" width="100%">
-                <img id="page98" src="Content/images/98.gif" width="100%">
-                <img id="page99" src="Content/images/99.gif" width="100%">
-                <img id="page100" src="Content/images/100.gif" width="100%">
-                <img id="page101" src="Content/images/101.gif" width="100%">
-                <img id="page102" src="Content/images/102.gif" width="100%">
-                <img id="page103" src="Content/images/103.gif" width="100%">
-                <img id="page104" src="Content/images/104.gif" width="100%">
-                <img id="page105" src="Content/images/105.gif" width="100%">
-                <img id="page106" src="Content/images/106.gif" width="100%">
-                <img id="page107" src="Content/images/107.gif" width="100%">
-                <img id="page108" src="Content/images/108.gif" width="100%">
-                <img id="page109" src="Content/images/109.gif" width="100%">
-                <img id="page110" src="Content/images/110.gif" width="100%">
-                <img id="page111" src="Content/images/111.gif" width="100%">
-                <img id="page112" src="Content/images/112.gif" width="100%">
-                <img id="page113" src="Content/images/113.gif" width="100%">
-                <img id="page114" src="Content/images/114.gif" width="100%">
-                <img id="page115" src="Content/images/115.gif" width="100%">
-                <img id="page116" src="Content/images/116.gif" width="100%">
-                <img id="page117" src="Content/images/117.gif" width="100%">
-                <img id="page118" src="Content/images/118.gif" width="100%">
-                <img id="page119" src="Content/images/119.gif" width="100%">
-                <img id="page120" src="Content/images/120.gif" width="100%">
-                <img id="page121" src="Content/images/121.gif" width="100%">
-                <img id="page122" src="Content/images/122.gif" width="100%">
-                <img id="page123" src="Content/images/123.gif" width="100%">
-                <img id="page124" src="Content/images/124.gif" width="100%">
-                <img id="page125" src="Content/images/125.gif" width="100%">
-                <img id="page126" src="Content/images/126.gif" width="100%">
-                <img id="page127" src="Content/images/127.gif" width="100%">
-                <img id="page128" src="Content/images/128.gif" width="100%">
-                <img id="page129" src="Content/images/129.gif" width="100%">
-                <img id="page130" src="Content/images/130.gif" width="100%">
-                <img id="page131" src="Content/images/131.gif" width="100%">
-                <img id="page132" src="Content/images/132.gif" width="100%">
-                <img id="page133" src="Content/images/133.gif" width="100%">
-                <img id="page134" src="Content/images/134.gif" width="100%">
-                <img id="page135" src="Content/images/135.gif" width="100%">
-                <img id="page136" src="Content/images/136.gif" width="100%">
-                <img id="page137" src="Content/images/137.gif" width="100%">
-                <img id="page138" src="Content/images/138.gif" width="100%">
-                <img id="page139" src="Content/images/139.gif" width="100%">
-                <img id="page140" src="Content/images/140.gif" width="100%">
-                <img id="page141" src="Content/images/141.gif" width="100%">
-                <img id="page142" src="Content/images/142.gif" width="100%">
-                <img id="page143" src="Content/images/143.gif" width="100%">
-                <img id="page144" src="Content/images/144.gif" width="100%">
-                <img id="page145" src="Content/images/145.gif" width="100%">
-                <img id="page146" src="Content/images/146.gif" width="100%">
-                <img id="page147" src="Content/images/147.gif" width="100%">
-                <img id="page148" src="Content/images/148.gif" width="100%">
-                <img id="page149" src="Content/images/149.gif" width="100%">
-                <img id="page150" src="Content/images/150.gif" width="100%">
-                <img id="page151" src="Content/images/151.gif" width="100%">
-                <img id="page152" src="Content/images/152.gif" width="100%">
-                <img id="page153" src="Content/images/153.gif" width="100%">
-                <img id="page154" src="Content/images/154.gif" width="100%">
-                <img id="page155" src="Content/images/155.gif" width="100%">
-                <img id="page156" src="Content/images/156.gif" width="100%">
-                <img id="page157" src="Content/images/157.gif" width="100%">
-                <img id="page158" src="Content/images/158.gif" width="100%">
-                <img id="page159" src="Content/images/159.gif" width="100%">
-                <img id="page160" src="Content/images/160.gif" width="100%">
-                <img id="page161" src="Content/images/161.gif" width="100%">
-                <img id="page162" src="Content/images/162.gif" width="100%">
-                <img id="page163" src="Content/images/163.gif" width="100%">
-                <img id="page164" src="Content/images/164.gif" width="100%">
-                <img id="page165" src="Content/images/165.gif" width="100%">
-                <img id="page166" src="Content/images/166.gif" width="100%">
-                <img id="page167" src="Content/images/167.gif" width="100%">
-                <img id="page168" src="Content/images/168.gif" width="100%">
-                <img id="page169" src="Content/images/169.gif" width="100%">
-                <img id="page170" src="Content/images/170.gif" width="100%">
-                <img id="page171" src="Content/images/171.gif" width="100%">
-                <img id="page172" src="Content/images/172.gif" width="100%">
-                <img id="page173" src="Content/images/173.gif" width="100%">
-                <img id="page174" src="Content/images/174.gif" width="100%">
-                <img id="page175" src="Content/images/175.gif" width="100%">
-                <img id="page176" src="Content/images/176.gif" width="100%">
-                <img id="page177" src="Content/images/177.gif" width="100%">
-                <img id="page178" src="Content/images/178.gif" width="100%">
-                <img id="page179" src="Content/images/179.gif" width="100%">
-                <img id="page180" src="Content/images/180.gif" width="100%">
-                <img id="page181" src="Content/images/181.gif" width="100%">
-                <img id="page182" src="Content/images/182.gif" width="100%">
-                <img id="page183" src="Content/images/183.gif" width="100%">
-                <img id="page184" src="Content/images/184.gif" width="100%">
-                <img id="page185" src="Content/images/185.gif" width="100%">
-                <img id="page186" src="Content/images/186.gif" width="100%">
-                <img id="page187" src="Content/images/187.gif" width="100%">
-                <img id="page188" src="Content/images/188.gif" width="100%">
-                <img id="page189" src="Content/images/189.gif" width="100%">
-                <img id="page190" src="Content/images/190.gif" width="100%">
-                <img id="page191" src="Content/images/191.gif" width="100%">
-                <img id="page192" src="Content/images/192.gif" width="100%">
-                <img id="page193" src="Content/images/193.gif" width="100%">
-                <img id="page194" src="Content/images/194.gif" width="100%">
-                <img id="page195" src="Content/images/195.gif" width="100%">
-                <img id="page196" src="Content/images/196.gif" width="100%">
-                <img id="page197" src="Content/images/197.gif" width="100%">
-                <img id="page198" src="Content/images/198.gif" width="100%">
-                <img id="page199" src="Content/images/199.gif" width="100%">
-                <img id="page200" src="Content/images/200.gif" width="100%">
-                <img id="page201" src="Content/images/201.gif" width="100%">
-                <img id="page202" src="Content/images/202.gif" width="100%">
-                <img id="page203" src="Content/images/203.gif" width="100%">
-                <img id="page204" src="Content/images/204.gif" width="100%">
-                <img id="page205" src="Content/images/205.gif" width="100%">
-                <img id="page206" src="Content/images/206.gif" width="100%">
-                <img id="page207" src="Content/images/207.gif" width="100%">
-                <img id="page208" src="Content/images/208.gif" width="100%">
-                <img id="page209" src="Content/images/209.gif" width="100%">
-                <img id="page210" src="Content/images/210.gif" width="100%">
-                <img id="page211" src="Content/images/211.gif" width="100%">
-                <img id="page212" src="Content/images/212.gif" width="100%">
-                <img id="page213" src="Content/images/213.gif" width="100%">
-                <img id="page214" src="Content/images/214.gif" width="100%">
-                <img id="page215" src="Content/images/215.gif" width="100%">
-                <img id="page216" src="Content/images/216.gif" width="100%">
-                <img id="page217" src="Content/images/217.gif" width="100%">
-                <img id="page218" src="Content/images/218.gif" width="100%">
-                <img id="page219" src="Content/images/219.gif" width="100%">
-                <img id="page220" src="Content/images/220.gif" width="100%">
-                <img id="page221" src="Content/images/221.gif" width="100%">
-                <img id="page222" src="Content/images/222.gif" width="100%">
-                <img id="page223" src="Content/images/223.gif" width="100%">
-                <img id="page224" src="Content/images/224.gif" width="100%">
-                <img id="page225" src="Content/images/225.gif" width="100%">
-                <img id="page226" src="Content/images/226.gif" width="100%">
-                <img id="page227" src="Content/images/227.gif" width="100%">
-                <img id="page228" src="Content/images/228.gif" width="100%">
-                <img id="page229" src="Content/images/229.gif" width="100%">
-                <img id="page230" src="Content/images/230.gif" width="100%">
-                <img id="page231" src="Content/images/231.gif" width="100%">
-                <img id="page232" src="Content/images/232.gif" width="100%">
-                <img id="page233" src="Content/images/233.gif" width="100%">
-                <img id="page234" src="Content/images/234.gif" width="100%">
-                <img id="page235" src="Content/images/235.gif" width="100%">
-                <img id="page236" src="Content/images/236.gif" width="100%">
-                <img id="page237" src="Content/images/237.gif" width="100%">
-                <img id="page238" src="Content/images/238.gif" width="100%">
-                <img id="page239" src="Content/images/239.gif" width="100%">
-                <img id="page240" src="Content/images/240.gif" width="100%">
-                <img id="page241" src="Content/images/241.gif" width="100%">
-                <img id="page242" src="Content/images/242.gif" width="100%">
-                <img id="page243" src="Content/images/243.gif" width="100%">
-                <img id="page244" src="Content/images/244.gif" width="100%">
-                <img id="page245" src="Content/images/245.gif" width="100%">
-                <img id="page246" src="Content/images/246.gif" width="100%">
-                <img id="page247" src="Content/images/247.gif" width="100%">
-                <img id="page248" src="Content/images/248.gif" width="100%">
-                <img id="page249" src="Content/images/249.gif" width="100%">
-                <img id="page250" src="Content/images/250.gif" width="100%">
-                <img id="page251" src="Content/images/251.gif" width="100%">
-                <img id="page252" src="Content/images/252.gif" width="100%">
-                <img id="page253" src="Content/images/253.gif" width="100%">
-                <img id="page254" src="Content/images/254.gif" width="100%">
-                <img id="page255" src="Content/images/255.gif" width="100%">
-                <img id="page256" src="Content/images/256.gif" width="100%">
-                <img id="page257" src="Content/images/257.gif" width="100%">
-                <img id="page258" src="Content/images/258.gif" width="100%">
-                <img id="page259" src="Content/images/259.gif" width="100%">
-                <img id="page260" src="Content/images/260.gif" width="100%">
-                <img id="page261" src="Content/images/261.gif" width="100%">
-                <img id="page262" src="Content/images/262.gif" width="100%">
-                <img id="page263" src="Content/images/263.gif" width="100%">
-                <img id="page264" src="Content/images/264.gif" width="100%">
-                <img id="page265" src="Content/images/265.gif" width="100%">
-                <img id="page266" src="Content/images/266.gif" width="100%">
-                <img id="page267" src="Content/images/267.gif" width="100%">
-                <img id="page268" src="Content/images/268.gif" width="100%">
-                <img id="page269" src="Content/images/269.gif" width="100%">
-                <img id="page270" src="Content/images/270.gif" width="100%">
-                <img id="page271" src="Content/images/271.gif" width="100%">
-                <img id="page272" src="Content/images/272.gif" width="100%">
-                <img id="page273" src="Content/images/273.gif" width="100%">
-                <img id="page274" src="Content/images/274.gif" width="100%">
-                <img id="page275" src="Content/images/275.gif" width="100%">
-                <img id="page276" src="Content/images/276.gif" width="100%">
-                <img id="page277" src="Content/images/277.gif" width="100%">
-                <img id="page278" src="Content/images/278.gif" width="100%">
-                <img id="page279" src="Content/images/279.gif" width="100%">
-                <img id="page280" src="Content/images/280.gif" width="100%">
-                <img id="page281" src="Content/images/281.gif" width="100%">
-                <img id="page282" src="Content/images/282.gif" width="100%">
-                <img id="page283" src="Content/images/283.gif" width="100%">
-                <img id="page284" src="Content/images/284.gif" width="100%">
-                <img id="page285" src="Content/images/285.gif" width="100%">
-                <img id="page286" src="Content/images/286.gif" width="100%">
-                <img id="page287" src="Content/images/287.gif" width="100%">
-                <img id="page288" src="Content/images/288.gif" width="100%">
-                <img id="page289" src="Content/images/289.gif" width="100%">
-                <img id="page290" src="Content/images/290.gif" width="100%">
-                <img id="page291" src="Content/images/291.gif" width="100%">
-                <img id="page292" src="Content/images/292.gif" width="100%">
-                <img id="page293" src="Content/images/293.gif" width="100%">
-                <img id="page294" src="Content/images/294.gif" width="100%">
-                <img id="page295" src="Content/images/295.gif" width="100%">
-                <img id="page296" src="Content/images/296.gif" width="100%">
-                <img id="page297" src="Content/images/297.gif" width="100%">
-                <img id="page298" src="Content/images/298.gif" width="100%">
-                <img id="page299" src="Content/images/299.gif" width="100%">
-                <img id="page300" src="Content/images/300.gif" width="100%">
-                <img id="page301" src="Content/images/301.gif" width="100%">
-                <img id="page302" src="Content/images/302.gif" width="100%">
-                <img id="page303" src="Content/images/303.gif" width="100%">
-                <img id="page304" src="Content/images/304.gif" width="100%">
-                <img id="page305" src="Content/images/305.gif" width="100%">
-                <img id="page306" src="Content/images/306.gif" width="100%">
-                <img id="page307" src="Content/images/307.gif" width="100%">
-                <img id="page308" src="Content/images/308.gif" width="100%">
-                <img id="page309" src="Content/images/309.gif" width="100%">
-                <img id="page310" src="Content/images/310.gif" width="100%">
-                <img id="page311" src="Content/images/311.gif" width="100%">
-                <img id="page312" src="Content/images/312.gif" width="100%">
-                <img id="page313" src="Content/images/313.gif" width="100%">
-                <img id="page314" src="Content/images/314.gif" width="100%">
-                <img id="page315" src="Content/images/315.gif" width="100%">
-                <img id="page316" src="Content/images/316.gif" width="100%">
-                <img id="page317" src="Content/images/317.gif" width="100%">
-                <img id="page318" src="Content/images/318.gif" width="100%">
-                <img id="page319" src="Content/images/319.gif" width="100%">
-                <img id="page320" src="Content/images/320.gif" width="100%">
-                <img id="page321" src="Content/images/321.gif" width="100%">
-                <img id="page322" src="Content/images/322.gif" width="100%">
-                <img id="page323" src="Content/images/323.gif" width="100%">
-                <img id="page324" src="Content/images/324.gif" width="100%">
-                <img id="page325" src="Content/images/325.gif" width="100%">
-                <img id="page326" src="Content/images/326.gif" width="100%">
-                <img id="page327" src="Content/images/327.gif" width="100%">
-                <img id="page328" src="Content/images/328.gif" width="100%">
-                <img id="page329" src="Content/images/329.gif" width="100%">
-                <img id="page330" src="Content/images/330.gif" width="100%">
-                <img id="page331" src="Content/images/331.gif" width="100%">
-                <img id="page332" src="Content/images/332.gif" width="100%">
-                <img id="page333" src="Content/images/333.gif" width="100%">
-                <img id="page334" src="Content/images/334.gif" width="100%">
-                <img id="page335" src="Content/images/335.gif" width="100%">
-                <img id="page336" src="Content/images/336.gif" width="100%">
-                <img id="page337" src="Content/images/337.gif" width="100%">
-                <img id="page338" src="Content/images/338.gif" width="100%">
-                <img id="page339" src="Content/images/339.gif" width="100%">
-                <img id="page340" src="Content/images/340.gif" width="100%">
-                <img id="page341" src="Content/images/341.gif" width="100%">
-                <img id="page342" src="Content/images/342.gif" width="100%">
-                <img id="page343" src="Content/images/343.gif" width="100%">
+                <ul class="nav nav-pills nav-stacked">
+                    <li>
+                        <a href="">Shacharit</a>
+                        <ul class="nav nav-pills nav-stacked submenu">
+                            <li><a href="#page1">Birchat Hashachar</a></li>
+                            <li><a href="#page12">Ma Tovu</a></li>
+                            <li><a href="#page18">Korbonot</a></li>
+                            <li><a href="#page27">Hodu</a></li>
+                            <li><a href="#page42">Birchot Shema</a></li>
+                            <li><a href="#page50">Amida</a></li>
+                            <li><a href="#page71">Ashrei UvaLitziyon</a></li>
+                            <li><a href="#page84">Oleinu</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#page88">Benching</a></li>
+                    <li><a href="#page96">Mincha</a></li>
+                    <li><a href="#page106">Ma'ariv</a></li>
+                    <li><a href="#page118">Shema Al Hamita</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-offset-2 col-xs-10" ng-controller="PagesController" id="pages">
+                <img id="page{{page}}" src="Content/images/{{page}}.gif" width="100%" ng-repeat="page in pages">
             </div>
         </div>
 
@@ -405,9 +102,27 @@
         </footer>
     </div>
     <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script type="text/javascript">
-        $(function () {
+        function PagesController($scope) {
+            $scope.pages = range(1, 344);
+            $scope.shacharit = range(1, 86);
+            $scope.mincha = range(96, 106);
+            $scope.maariv = range(106, 118);
+            $scope.shema = range(118, 122);
+            $scope.erevshabbat = range(122, 124);
+        }
+        function range(start, count) {
+            return Array.apply(0, Array(count))
+                        .map(function (element, index) { 
+                            return index + start;  
+                        });
+        }
+        $("#menu-toggle").click(function () {
+            $(".secondary-menu").toggleClass("out");
+            $("#pages").toggleClass("col-xs-offset-2 col-xs-10 col-xs-12")
         });
     </script>
 
