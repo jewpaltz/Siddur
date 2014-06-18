@@ -26,13 +26,19 @@
             .secondary-menu.out {
                 left: -12%;
             }
+            .secondary-menu ul ul {
+                display: none;
+            }
+            .secondary-menu ul .active ul {
+                display: block;
+            }
         #pages {
             -moz-transition: width .2s, margin .2s;
             -o-transition: width .2s, margin .2s;
             -webkit-transition: width .2s, margin .2s;
             transition: width .2s, margin .2s;
         }
-        @media only screen and (max-width : 992px) {
+        @media only screen and (max-width : 991px) {
             .col-xs-offset-2 {
                 margin-left: 16%;
             }
@@ -65,7 +71,7 @@
         }
     </style>
 </head>
-<body data-spy="scroll" data-target=".secondary-menu" ng-app="">
+<body data-spy="scroll" data-target=".secondary-menu" ng-app="siddur">
     <div class="container body-content">
         <div class="row">
             <div class="secondary-menu col-xs-2">
@@ -78,7 +84,7 @@
                 </div>
                 <ul class="nav nav-pills nav-stacked">
                     <li>
-                        <a href="">Shacharit</a>
+                        <a href="#shacharit">Shacharit</a>
                         <ul class="nav nav-pills nav-stacked submenu">
                             <li><a href="#page1">Birchat Hashachar</a></li>
                             <li><a href="#page12">Ma Tovu</a></li>
@@ -91,14 +97,16 @@
 
                         </ul>
                     </li>
-                    <li><a href="#page88">Benching</a></li>
-                    <li><a href="#page96">Mincha</a></li>
-                    <li><a href="#page106">Ma'ariv</a></li>
-                    <li><a href="#page118">Shema Al Hamita</a></li>
+                    <li><a href="#benching">Benching</a></li>
+                    <li><a href="#mincha">Mincha</a></li>
+                    <li><a href="#maariv">Ma'ariv</a></li>
+                    <li><a href="#shema">Shema Al Hamita</a></li>
+                    <li><a href="#erevshabbat">Mincha Erev Shabbat</a></li>
                 </ul>
             </div>
-            <div class="col-xs-offset-2 col-xs-10" ng-controller="PagesController" id="pages">
-                <img id="page{{page}}" src="Content/images/{{page}}.gif" width="100%" ng-repeat="page in pages">
+            <div class="col-xs-offset-2 col-xs-10" id="pages" ng-controller="PagesController">
+                <a id="{{section}}" />
+                <img id="page{{page}}" ng-src="Content/images/{{page}}.gif" width="100%" ng-repeat="page in pages">
             </div>
         </div>
 
@@ -109,30 +117,56 @@
     </div>
     <script src="Scripts/jquery-1.10.2.min.js"></script>
     <script src="Scripts/angular.js"></script>
-    <script src="Scripts/angular-route.js"></script>
+
     <script src="Scripts/bootstrap.min.js"></script>
     <script type="text/javascript">
-        function PagesController($scope) {
+        'use strict';
+        var app = angular.module('siddur', []);
+
+
+        app.controller('PagesController', function ($scope) {
             $scope.shacharit = range(1, 86);
+            $scope.benching = range(87, 95);
             $scope.mincha = range(96, 106);
             $scope.maariv = range(106, 118);
             $scope.shema = range(118, 122);
             $scope.erevshabbat = range(122, 124);
 
-            $scope.pages = $scope.shacharit;
-            //$scope.pages = range(1, 344);
-        }
-        function range(start, count) {
-            return Array.apply(0, Array(count))
-                        .map(function (element, index) { 
-                            return index + start;  
-                        });
-        }
+            function router() {
+                var url = location.hash.slice(1) || 'shacharit' ;
+                if ($scope[url]) {
+                    $scope.section = url;
+                    $scope.pages = $scope[url];
+                    SafeApply($scope);
+                    setTimeout(function () {
+                        $("body").scrollspy('refresh');
+                        $("body").scrollTop($("body")[0].scrollTop + 1);
+                    }, 50);
+                }
+            }
+            window.addEventListener('hashchange', router);
+            router();
+        });
         $("#menu-toggle").click(function () {
             $(".secondary-menu").toggleClass("out");
             $("#pages").toggleClass("col-xs-offset-2 col-xs-10 col-xs-offset-1 col-xs-11 col-md-12")
         });
     </script>
+    <script type="text/javascript">
+        function SafeApply($scope) {
+            if ($scope.$root.$$phase != '$apply' && $scope.$root.$$phase != '$digest') {
+                $scope.$apply();
+            }
+        }
+        function range(start, end) {
+            var arr = [];
+            for (var i = start; i < end; i++) {
+                arr.push(i);
+            }
+            return arr;
+        }
+    </script>
 
 </body>
+
 </html>
