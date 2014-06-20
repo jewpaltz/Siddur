@@ -119,8 +119,8 @@
             $scope.benching = range(87, 95);
             $scope.mincha = range(96, 106);
             $scope.maariv = range(106, 118);
-            $scope.shema = range(118, 122);
-            $scope.erevshabbat = range(122, 124);
+            $scope.shema = range(118, 124);
+            $scope.erevshabbat = range(124, 126);
 
             function router() {
                 var url = location.hash.slice(1) || 'shacharit' ;
@@ -138,11 +138,12 @@
             router();
         });
 
-        (function () {
+        $(function () {
             var IsMenuShown = true;
             var $menu = $(".secondary-menu");
             var $pages = $("#pages");
             var containerWidth = $(".container").width();
+            var scrollbarWidth = getScrollbarWidth();
             ///////////////////////////////////////
             //  Init Widths
             $pages.animate({ width: containerWidth - $menu.width() - 20, marginLeft: $menu.width() + 15 });
@@ -156,11 +157,11 @@
                     $pages.animate({ width: containerWidth - $menu.width() - 20, marginLeft: $menu.width() + 15 });
                     $menu.animate({ left: 0 }).removeClass("out");
                 } else {
-                    $pages.animate({ width: containerWidth, marginLeft: 0 });
-                    $menu.animate({ left: -($menu.width() - 20) }).addClass("out");
+                    $pages.animate({ width: containerWidth - 10 - scrollbarWidth, marginLeft: 10 });
+                    $menu.animate({ left: -($menu.width() - 10 - scrollbarWidth) }).addClass("out");
                 }
             });
-        })();
+        });
     </script>
     <script type="text/javascript">
         function SafeApply($scope) {
@@ -174,6 +175,30 @@
                 arr.push(i);
             }
             return arr;
+        }
+        function getScrollbarWidth() {
+            var outer = document.createElement("div");
+            outer.style.visibility = "hidden";
+            outer.style.width = "100px";
+            outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+
+            document.body.appendChild(outer);
+
+            var widthNoScroll = outer.offsetWidth;
+            // force scrollbars
+            outer.style.overflow = "scroll";
+
+            // add innerdiv
+            var inner = document.createElement("div");
+            inner.style.width = "100%";
+            outer.appendChild(inner);
+
+            var widthWithScroll = inner.offsetWidth;
+
+            // remove divs
+            outer.parentNode.removeChild(outer);
+
+            return widthNoScroll - widthWithScroll;
         }
     </script>
 
