@@ -144,14 +144,14 @@
             /*global*/ InitWidths = function () {
                 containerWidth = $(".container").width();
                 if (IsMenuShown) {
-                    $pages.animate({ width: containerWidth - $menu.width() - scrollbarWidth + 50, marginLeft: $menu.width() }).promise()
+                    $pages.animate({ width: containerWidth - $menu.width() - scrollbarWidth + 45, marginLeft: $menu.width() - 5 }).promise()
                         .then(function () {
                             $("body").scrollspy('refresh');
                         });
                     $menu.animate({ left: 0 }).removeClass("out");
                     $("body").scrollspy('refresh');
                 } else {
-                    $pages.animate({ width: containerWidth - 10 - scrollbarWidth + 50, marginLeft: 10 }).promise()
+                    $pages.animate({ width: containerWidth - 10 - scrollbarWidth + 45, marginLeft: 5 }).promise()
                         .then(function () {
                             $("body").scrollspy('refresh');
                         });
